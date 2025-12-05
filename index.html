@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Yerko Sepulveda Rojas" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="SIGEM" />
+    <link rel="apple-touch-icon" href="/SIGEM/apple-touch-icon.png" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="/SIGEM/logo.png" />
+    <title>SIGEM</title>
+    <script type="module" crossorigin src="/SIGEM/assets/index-CNX8pQNT.js"></script>
+    <link rel="stylesheet" crossorigin href="/SIGEM/assets/index-Du3z8ued.css">
+  <link rel="manifest" href="/SIGEM/manifest.webmanifest"></head>
+  <body>
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <div id="root"></div>
+  </body>
+</html>

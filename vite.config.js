@@ -25,7 +25,7 @@ export default defineConfig({
       manifest: {
         id: "/SIGEM/",
         name: "SIGEM",
-        short_name: "SIGEM",
+        short_name: "SIGEM ",
         description:
           "Gestión colaborativa de órdenes de mantenimiento con soporte offline.",
         theme_color: "#0f172a",

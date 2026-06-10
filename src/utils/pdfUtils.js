@@ -1,7 +1,10 @@
 import * as pdfjsLib from "pdfjs-dist";
-pdfjsLib.GlobalWorkerOptions.workerSrc = `${
-  import.meta.env.BASE_URL || "/"
-}pdf.worker.min.mjs`;
+
+import PDFWorker from 'pdfjs-dist/build/pdf.worker.mjs?worker';
+
+if (!pdfjsLib.GlobalWorkerOptions.workerPort) {
+  pdfjsLib.GlobalWorkerOptions.workerPort = new PDFWorker();
+}
 
 // 1. Extraer texto de PDF
 async function extractTextFromPdf(file) {

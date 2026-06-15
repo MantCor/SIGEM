@@ -342,7 +342,7 @@ export function PeerProvider({ children }) {
   const isHierarchyAllowed = useCallback((localUser, remoteUser) => {
     if (!localUser || !remoteUser) return true;
     const pair = [localUser.role, remoteUser.role].sort().join("-");
-    return pair === "admin-supervisor" || pair === "mantenedor-supervisor";
+    return pair === "admin-supervisor" || pair === "mantenedor-supervisor" || pair === "admin-admin";
   }, []);
 
   const canSendOrdersTo = useCallback(

@@ -795,6 +795,10 @@ export default function OrdersManager() {
                                     Kit de Tareas{" "}
                                     {order.info["Kit de Tareas"] || " "}
                                   </p>
+                                  <p className="mt-1 text-sm">
+                                    Fecha de ejecucion{" "}
+                                    {order.info["fecha_fin"] ? new Date(order.info["fecha_fin"]).toLocaleDateString() : " "}
+                                  </p>
 
                                   {statusKey === 3 && cancelReasons.length ? (
                                     <p
